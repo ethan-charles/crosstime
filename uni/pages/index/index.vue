@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png" @click="getUserProfile"></image>
+		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -101,7 +101,7 @@
 					}
 			    }),
 				wx.request({
-						url: 'http://localhost:8080/springboot/user/login',
+						url: 'http://localhost:8080/域名/user/login',
 						method: 'POST',
 						header:{ 'content-type': 'application/x-www-form-urlencoded'},
 						data:{
