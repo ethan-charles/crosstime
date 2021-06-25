@@ -1,6 +1,12 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/study/study",
+    "pages/mine/mine",
+    "pages/rest/rest",
+    "pages/gettime/gettime",
+    "pages/connectus/connectus",
+    "pages/teach/teach"
   ],
   "subPackages": [],
   "window": {
@@ -11,5 +17,6 @@
   },
   "usingComponents": {
     "xfl-select": "/components/xfl-select/xfl-select"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

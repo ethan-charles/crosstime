@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "Cross-time",
   "usingComponents": {
     "xfl-select": "/components/xfl-select/xfl-select"
   }

@@ -2,7 +2,7 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<text class="title">首页</text>
 		</view>
 		<view class="container">
 				<view class="user-info-box" @click="getUserProfile" v-if="!hasUserInfo">
