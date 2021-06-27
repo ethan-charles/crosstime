@@ -62,7 +62,7 @@
 			},
 			gopage(){
 				uni.navigateTo({
-					url: "../teach/teach"
+					url: "../choosemodule/choosemodule"
 				});
 			}
 		},

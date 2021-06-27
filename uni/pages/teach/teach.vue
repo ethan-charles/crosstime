@@ -56,7 +56,11 @@
 			
 		},
 		methods: {
-			
+			gotoConn(){
+				uni.navigateTo({
+					url: "../mine/mine"
+				});
+			}
 			
 		}
 	}
