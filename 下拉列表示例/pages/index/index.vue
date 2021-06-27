@@ -45,7 +45,7 @@
 				:list="list"
 				:clearable="false"
 				:showItemNum="5" 
-				:listShow="true"
+				:listShow="false"
 				:isCanInput="true"  
 				:style_Container="listBoxStyle"
 				:placeholder = "'placeholder'"

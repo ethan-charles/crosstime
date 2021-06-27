@@ -6,9 +6,18 @@
 				"navigationBarTitleText": "Cross-time"
 			}
 		}
+		,{
+		    "path" : "pages/teach/teach",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": ""
+		        // "enablePullDownRefresh": false
+		    }
+		    
+		}
 	    ,{
             "path" : "pages/study/study",
-            "style" :                                                                                    
+            "style" :                                      
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
@@ -51,15 +60,7 @@
             }
             
         }
-		,{
-		    "path" : "pages/teach/teach",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
+		
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
