@@ -1,35 +1,56 @@
 <template>
-	<view>
+	<view class="container">
 		<view class="header" :style="{'height':titleBarHeight,'padding-top':statusBarHeight,'background-color': '#F8F8F8'}">
 			<image class='header-back' src='/static/logo.png' style="height: 50upx; width: 50upx;" @click="gotoConn()"></image>
 			<view class="header-title">教学界面</view>
 		</view>
+		<view style="width: 20%; margin: auto;margin-bottom: 20px;">
+			<xfl-select 
+			:list="list"
+			:clearable="false"
+			:showItemNum="5" 
+			:listShow="false"
+			:isCanInput="false"  
+			:style_Container="listBoxStyle"
+			:placeholder = "'placeholder'"
+			:initValue="'中'"
+			:selectHideType="'independent'"
+			>
+			</xfl-select>
+		</view>
+		
 		<view :style="{'height':titleBarHeight,'padding-top':statusBarHeight}"></view>
 		<view class="classification">
 			<view class="tag" @click="goTag(0)">
 				<image src='../../static/01.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">#分类标签</view>
+				<view style="font-size: small;">消息</view>
 			</view>
 			<view class="tag" @click="goTag(1)">
 				<image src='../../static/02.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">#分类标签</view>
+				<view style="font-size: small;">历史</view>
 			</view>
 			<view class="tag" @click="goTag(2)">
 				<image src='../../static/04.png' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">#分类标签</view>
+				<view style="font-size: small;">广场</view>
 			</view>
 			<view class="tag" @click="goTag(3)">
 				<image src='../../static/05.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">#分类标签</view>
+				<view style="font-size: small;">排行榜</view>
 			</view>
 		</view>
+		<view>
+			<image src="../../static/clock2.png"></image>
+			<text>请选择本次教学接受的聊天方式</text>
+		</view>
+		<view>
+			<uni-group title="更多样式-button">
+				<view class="text">选中：{{JSON.stringify(formData.hobby)}}</view>
+				<uni-data-checkbox mode="button" multiple v-model="formData.hobby" :localdata="hobby"></uni-data-checkbox>
+			</uni-group>
+		</view>
 		<view class='btns'>
-			<view>
-			<button>教学</button>
-			</view>
-			<view>
-			<button>学习</button>
-			</view>
+			<image src="../../static/images/study.gif" @click="gopage(1)"style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/images/teach.png" @click="gopage(0)"style="width:370rpx; height: 200rpx;"></image>
 		</view>
 	</view>
 </template>
@@ -38,7 +59,28 @@
 	export default {
 		data() {
 			return {
-				
+				listBoxStyle: `height: 20px; font-size: 16px;`,
+				list: [
+					'英',
+					'韩',
+					{value: '日', disabled: true},
+					'德',
+					'西',
+				],
+				statusBarHeight: 0,
+				titleBarHeight: 0,
+				formData: {
+						value: 1,
+						hobby: [1]
+					},
+					hobby: [{
+						text: '电话',
+						value: 0
+					}, {
+						text: '视频',
+						value: 1
+					}],
+					
 			}
 		},
 		created() {
@@ -60,18 +102,48 @@
 				uni.navigateTo({
 					url: "../mine/mine"
 				});
+			},
+			gopage(e){
+				if (e){
+					uni.navigateTo({
+						url: "../study/study"
+					});
+				}else{
+					uni.navigateTo({
+						url: "../teach/teach"
+					});
+				}
 			}
 			
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
+	@import '@/common/uni-nvue.scss';
+	
+	.example {
+		padding: 10px;
+		background-color: #fff;
+	}
+	
+	.text {
+		font-size: 14px;
+		color: #333;
+		margin-bottom: 10px;
+	}
+	.container {
+		position: relative;
+	}
 	.btns {
-		margin-top: 40rpx;
 		display: flex;
+		align-items: center;
+		position: fixed;
 		flex-direction: row;
-		flex-wrap: wrap;
+		bottom: 0;
+		z-index: 100;
+		left:0;
+		align-self: center;
 	}
 	.header {
 		display: flex;

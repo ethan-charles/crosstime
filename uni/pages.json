@@ -61,11 +61,21 @@
             
         }
 		
+        ,{
+            "path" : "pages/choosemodule/choosemodule",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "请选择模式",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
 	}
 }

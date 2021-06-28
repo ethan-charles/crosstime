@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/xfl-select/xfl-select":1};
+/******/ 		var cssChunks = {"components/xfl-select/xfl-select":1,"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":1,"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":1,"uni_modules/uni-list/components/uni-list-item/uni-list-item":1,"uni_modules/uni-list/components/uni-list/uni-list":1,"uni_modules/uni-load-more/components/uni-load-more/uni-load-more":1,"uni_modules/uni-icons/components/uni-icons/uni-icons":1,"uni_modules/uni-badge/components/uni-badge/uni-badge":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/xfl-select/xfl-select":"components/xfl-select/xfl-select"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/xfl-select/xfl-select":"components/xfl-select/xfl-select","uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot","uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox","uni_modules/uni-list/components/uni-list-item/uni-list-item":"uni_modules/uni-list/components/uni-list-item/uni-list-item","uni_modules/uni-list/components/uni-list/uni-list":"uni_modules/uni-list/components/uni-list/uni-list","uni_modules/uni-load-more/components/uni-load-more/uni-load-more":"uni_modules/uni-load-more/components/uni-load-more/uni-load-more","uni_modules/uni-icons/components/uni-icons/uni-icons":"uni_modules/uni-icons/components/uni-icons/uni-icons","uni_modules/uni-badge/components/uni-badge/uni-badge":"uni_modules/uni-badge/components/uni-badge/uni-badge"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
