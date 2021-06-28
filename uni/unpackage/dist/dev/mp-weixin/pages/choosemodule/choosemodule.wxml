@@ -1,1 +1,0 @@
-<view><image src="../../static/teach.png" data-event-opts="{{[['tap',[['gopage',[0]]]]]}}" bindtap="__e"></image><image src="../../static/study.png" data-event-opts="{{[['tap',[['gopage',[1]]]]]}}" bindtap="__e"></image></view>

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "xfl-select": "/components/xfl-select/xfl-select"
-  }
-}
