@@ -2,57 +2,26 @@
 	<view>
 		<view class="header" :style="{'height':titleBarHeight,'padding-top':statusBarHeight,'background-color': '#F8F8F8'}">
 			<image class='header-back' src='/static/logo.png' style="height: 50upx; width: 50upx;" @click="gotoConn()"></image>
-			<view class="header-title">学习界面</view>
+			<view class="header-title">专业模式</view>
 		</view>
 		<view :style="{'height':titleBarHeight,'padding-top':statusBarHeight}"></view>
 		
-		<view style="width: 10%; margin: auto;margin-bottom: 20px;">
-			<xfl-select 
-			:list="list"
-			:clearable="false"
-			:showItemNum="5" 
-			:listShow="true"
-			:isCanInput="true"  
-			:style_Container="listBoxStyle"
-			:placeholder = "'placeholder'"
-			:initValue="'中'"
-			:selectHideType="'independent'"
-			>
-			</xfl-select>
-		</view>
-		
 		<view>
-			<input v-model="value" focus placeholder="在此输入文字" style="width: 80%; margin: auto;margin-bottom: 20px;">
+			<input v-model="value" focus placeholder="搜索老师" style="width: 80%; margin: auto;margin-bottom: 20px;">
 		</view>
 		
-		<view class="classification">
-			<view class="tag" @click="goTag(4)">
-				<image src='../../static/profession.png' style="height: 100upx; width: 100upx;"></image>
-				<view style="font-size: small;">专业模块</view>
-			</view>
+		<view class='purchase'>
+			<image src="../../static/purchase/1.png" style="width:370rpx; height: 200rpx;"></image>
+			<br>
+			<image src="../../static/purchase/2.png" style="width:370rpx; height: 200rpx;"></image>
+			<br>
+			<image src="../../static/purchase/3.png" style="width:370rpx; height: 200rpx;"></image>
 		</view>
 		
-		<view class="classification">
-			<view class="tag" @click="goTag(0)">
-				<image src='../../static/01.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">消息</view>
-			</view>
-			<view class="tag" @click="goTag(1)">
-				<image src='../../static/02.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">历史</view>
-			</view>
-			<view class="tag" @click="goTag(2)">
-				<image src='../../static/04.png' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">广场</view>
-			</view>
-			<view class="tag" @click="goTag(3)">
-				<image src='../../static/05.gif' style="height: 50upx; width: 50upx;"></image>
-				<view style="font-size: small;">排行榜</view>
-			</view>
-		</view>
 		<view class='btns'>
-			<image src="../../static/images/study.gif" @click="gopage(1)"style="width:370rpx; height: 200rpx;"></image>
-			<image src="../../static/images/teach.png" @click="gopage(0)"style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-1.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-2.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-3.png" style="width:370rpx; height: 200rpx;"></image>
 		</view>
 	</view>
 </template>
