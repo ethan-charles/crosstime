@@ -21,7 +21,9 @@
 			</uni-list-item>
 			<uni-list-item title="关于我们" showArrow thumb="/static/tabs/asking-mark.png" thumb-size="base" clickable @click="goSb(6)" />
 		</uni-list>
-		<image src="../../static/exite.png"></image>
+		<view class="exite">
+			<image src="../../static/exite.png" style="width:370rpx; height: 200rpx;"></image>
+		</view>
 	</view>
 </template>
 
@@ -81,8 +83,11 @@
 </script>
 
 <style lang="scss">
-.list {
-		margin-right: 5rpx;
+	.list {
+			margin-right: 5rpx;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 	}
 
 	@import '@/common/uni-nvue.scss';
@@ -109,5 +114,19 @@
 		font-size: 14px;
 		color: #4cd964;
 		margin-right: 10px;
+	}
+	.text-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 25%;
+		margin-top: auto;
+	}
+	.exite {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 25%;
+		margin-top: auto;
 	}
 </style>
