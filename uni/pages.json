@@ -25,7 +25,7 @@
             
         }
         ,{
-            "path" : "pages/mine/mine",
+            "path" : "pages/mine-teach/mine-teach",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

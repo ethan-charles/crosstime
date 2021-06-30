@@ -37,9 +37,8 @@
 			goSb: function(i) {
 				switch (i) {
 					case 0:
-						uni.showToast({
-							title: '暂未开放',
-							icon: 'error'
+						uni.navigateTo({
+							url: "../teach/teach"
 						});
 						break;
 					case 1:

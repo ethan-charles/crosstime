@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Cross-time",
+  "usingComponents": {
+    "uni-swiper-dot": "/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot",
+    "xfl-select": "/components/xfl-select/xfl-select"
+  }
+}

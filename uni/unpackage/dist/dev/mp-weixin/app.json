@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teach/teach",
+    "pages/study/study",
+    "pages/mine-teach/mine-teach",
+    "pages/rest/rest",
+    "pages/gettime/gettime",
+    "pages/connectus/connectus",
+    "pages/choosemodule/choosemodule"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "xfl-select": "/components/xfl-select/xfl-select"
+  }
+}
