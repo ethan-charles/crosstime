@@ -23,7 +23,7 @@
 		<view :style="{'height':titleBarHeight,'padding-top':statusBarHeight}"></view>
 		
 		<view class="function">
-			<input v-model="value" focus placeholder="在此输入文字" style="width: 400upx; margin: auto;margin-bottom: 20px;">
+			<input v-model="value" focus placeholder="在此输入文字" style="width: 75%; margin: auto;margin-bottom: 20px;">
 			<view class="tag">
 				<image src='../../static/profession.png' @click="goprofession()" style="height: 100upx; width: 100upx;"></image>
 				<view style="font-size: small;">专业模块</view>
@@ -54,7 +54,7 @@
 		</view>
 		<br>
 		<view>
-			<image src="../../static/study-page.png" style="width:1080rpx; height: 768rpx;"></image>
+			<image src="../../static/study-page.png" style="width:750rpx; height: 500rpx;"></image>
 		</view>
 		<view class='btns'>
 			<image src="../../static/images/study.gif" @click="gopage(1)"style="width:370rpx; height: 200rpx;"></image>
@@ -204,7 +204,6 @@
 		align-content: stretch;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		width: 20%;
 	}
 	.tag {
 		display: flex;
@@ -213,5 +212,4 @@
 		width: 20%;
 		margin-top: auto;
 	}
-
 </style>

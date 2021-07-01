@@ -85,9 +85,6 @@
 <style lang="scss">
 	.list {
 			margin-right: 5rpx;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
 	}
 
 	@import '@/common/uni-nvue.scss';
@@ -119,14 +116,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 25%;
 		margin-top: auto;
 	}
 	.exite {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 25%;
 		margin-top: auto;
 	}
 </style>
