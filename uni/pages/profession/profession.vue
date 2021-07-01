@@ -11,17 +11,17 @@
 		</view>
 		
 		<view class='purchase'>
-			<image src="../../static/purchase/1.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/purchase/1.png" style="width:750rpx; height: 200rpx;"></image>
 			<br>
-			<image src="../../static/purchase/2.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/purchase/2.png" style="width:750rpx; height: 200rpx;"></image>
 			<br>
-			<image src="../../static/purchase/3.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/purchase/3.png" style="width:750rpx; height: 200rpx;"></image>
 		</view>
 		
 		<view class='btns'>
-			<image src="../../static/profession-1.png" style="width:370rpx; height: 200rpx;"></image>
-			<image src="../../static/profession-2.png" style="width:370rpx; height: 200rpx;"></image>
-			<image src="../../static/profession-3.png" style="width:370rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-1.png" style="width:250rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-2.png" style="width:250rpx; height: 200rpx;"></image>
+			<image src="../../static/profession-3.png" style="width:250rpx; height: 200rpx;"></image>
 		</view>
 	</view>
 </template>
@@ -90,6 +90,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		
 	}
 	.header {
 		display: flex;
