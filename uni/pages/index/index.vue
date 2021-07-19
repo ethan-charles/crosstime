@@ -1,34 +1,45 @@
 <template>
+	<!-- 页面背景图片自动切换 -->
 	<view class="content" style="position: relative; height: 100vh;">
 		<view style="z-index: 1;">
 		<uni-swiper-dot class="uni-swiper-dot-box" >
 			<swiper class="swiper-box">
 				<swiper-item v-for="(item, index) in info">
 					<view :class="item.colorClass" class="swiper-item">
-						<image class="image" :src="item.url" mode="aspectFill" :draggable="false" @click="onBanner(index)" />
+						<image class="image" :src="item.url" mode="aspectFill" :draggable="false"/>
 					</view>
 				</swiper-item>
 			</swiper>
 		</uni-swiper-dot></view>
 		
-		<view class="container" style="z-index: 2; position: absolute; top: 1100rpx;right: 0;">
-				<view  @click="gopage">
-					<image style="width: 220rpx; height: 100rpx;" src="../../static/start.png" open-type="getUserProfile"></image>
-				</view>
+		<!-- 标题 -->
+		<view style="z-index: 2; position: absolute; top: 1000rpx; left: 10px;">
+			<text style="font-size: 40px; font-weight: bold; color: #5d9fa2; text-shadow: -5px 5px 5px #626262">Cross</text>
+			<text style="font-size: 40px; font-weight: bold; color: #ffffff; text-shadow: -5px 5px 5px #626262">-time\n</text>
+			<text style="font-size: 15px; color: #ffffff; text-shadow: -5px 5px 5px #626262">随时随地开始语言学习吧！</text>
 		</view>
 		
-		<view style="width: 60%; margin: auto;margin-bottom: 20px;z-index: 2; position: absolute; top: 1100rpx;">
+		<!-- 开始按钮 -->
+
+		<view class="container" style="z-index: 3; position: absolute; top: 1200rpx; right: 0;">
+			<view @click="gopage">
+				<image style="width: 220rpx; height: 100rpx;" src="../../static/start.png" open-type="getUserProfile"></image>
+			</view>
+		</view>
+		
+		<!-- 选择语言提示框 -->
+		<view style="width: 50%; height: 100rpx; margin: auto; z-index: 4; position: absolute; top: 1200rpx;">	
 			<xfl-select 
-			:list="list"
-			:clearable="false"
-			:showItemNum="5" 
-			:listShow="false"
-			:isCanInput="false"  
-			:style_Container="listBoxStyle"
-			:placeholder = "'placeholder'"
-			:initValue="'请选择语言'"
-			:selectHideType="'independent'"
-			>
+				:list="list"
+				:clearable="false"
+				:showItemNum="5" 
+				:listShow="false"
+				:isCanInput="false"  
+				:style_Container="listBoxStyle"
+				:placeholder = "'placeholder'"
+				:initValue="'请选择语言'"
+				:selectHideType="'independent'"
+			style=" background-color: rgba(255, 134, 64, 0.5); height: 100rpx;">
 			</xfl-select>
 		</view>
 		

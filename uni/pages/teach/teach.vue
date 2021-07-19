@@ -14,8 +14,7 @@
 				:initValue="'中'"
 				:selectHideType="'independent'"
 				style="width: 200rpx;"
-				>
-				</xfl-select>
+				/>
 			</view>
 		</view>
 		<view :style="{'height':titleBarHeight,'padding-top':statusBarHeight}"></view>

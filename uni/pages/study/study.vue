@@ -1,31 +1,32 @@
 <template>
 	<view>
+		<!-- 标题栏 -->
 		<view class="header" :style="{'height':titleBarHeight,'padding-top':statusBarHeight,'background-color': '#F8F8F8'}">
-			<image class='header-back' src='/static/logo.png' style="height: 50upx; width: 50upx;" @click="gotoConn()"></image>
-		</view>
-		
-		<view style="width: 50%; margin: auto;margin-bottom: 20px; display: flex; flex-direction: row; justify-content: center;">
-			<xfl-select 
-			:list="list"
-			:clearable="false"
-			:showItemNum="5" 
-			:listShow="false"
-			:isCanInput="false"  
-			:style_Container="listBoxStyle"
-			:placeholder = "'placeholder'"
-			:initValue="'中'"
-			:selectHideType="'independent'"
-			style="width: 200rpx;"
-			>
-			</xfl-select>
-		</view>
-		
+			<image class='header-back' src='/static/logo.png' @click="gotoConn()"></image>
+			<view class="header-front">
+				<xfl-select
+					:list="list"
+					:clearable="false"
+					:showItemNum="5" 
+					:listShow="false"
+					:isCanInput="false"  
+					:style_Container="listBoxStyle"
+					:placeholder = "'placeholder'"
+					:initValue="'中'"
+					:selectHideType="'independent'"
+					style="width: 200rpx;"
+				/>
+			</view>
+			
+		</view>	
 		<view :style="{'height':titleBarHeight,'padding-top':statusBarHeight}"></view>
 		
+		<!-- 搜索框 vip-->
 		<view class="function">
-			<input v-model="value" focus placeholder="在此输入文字" style="width: 75%; margin: auto;margin-bottom: 20px;">
+			<!-- <input v-model="value" focus placeholder="在此输入文字" class="input"> -->
+			<input focus placeholder="在此输入文字" class="input"> 
 			<view class="tag">
-				<image src='../../static/profession.png' @click="goprofession()" style="height: 100upx; width: 100upx;"></image>
+				<image src='../../static/profession.png' @click="goprofession()" style="height: 80upx; width: 100upx;"></image>
 				<view style="font-size: small;">专业模块</view>
 			</view>
 		</view>
@@ -40,7 +41,7 @@
 				<view style="font-size: small;">历史</view>
 			</view>
 			<view class="tag" @click="goTag(2)">
-				<image src='../../static/03.png' style="height: 105upx; width: 150upx;"></image>
+				<image src='../../static/03.png' style="height: 80upx; width: 140upx;"></image>
 				<view style="font-size: small;">收藏</view>
 			</view>
 			<view class="tag" @click="goTag(3)">
@@ -52,9 +53,9 @@
 				<view style="font-size: small;">排行榜</view>
 			</view>
 		</view>
-		<br>
+		<view style="height: 40rpx;"></view>
 		<view>
-			<image src="../../static/study-page.png" style="width:750rpx; height: 500rpx;"></image>
+			<image src="../../static/study-page.png" style="width:750rpx; height: 800rpx;"></image>
 		</view>
 		<view class='btns'>
 			<image src="../../static/images/study.gif" @click="gopage(1)"style="width:370rpx; height: 200rpx;"></image>
@@ -67,6 +68,9 @@
 	export default {
 		data() {
 			return {
+				titleBarHeight: 0,
+				statusBarHeight: 0,
+				
 				listBoxStyle: `height: 40px; font-size: 16px;`,
 				list: [
 					'中',
@@ -128,34 +132,7 @@
 
 <style lang="scss">
 	@import '@/common/uni-nvue.scss';
-	.checkbox{
-		position: relative;
-		
-		width: 80%; 
-		margin: auto; 
-		display: flex; 
-		flex-direction: row; 
-		justify-content: center;
-	}
-	.wind{
-		width: 80%; 
-		margin: auto;
-		margin-bottom: auto;
-		display: flex;
-		flex-direction: row; 
-		justify-content: center;
-		font-size: 18px;
-	}
-	.example {
-		padding: 10px;
-		background-color: #fff;
-	}
-	
-	.text {
-		font-size: 14px;
-		color: #333;
-		margin-bottom: 10px;
-	}
+
 	.container {
 		position: relative;
 	}
@@ -178,19 +155,26 @@
 		z-index: 100;
 		left:0;
 	}
-	.header-title {
-		position: absolute;
-		left: 50%;
-		font-size: 38upx;
-		transform: translateX(-50%);
-	}
 	.header-back {
 		position: absolute;
 		left:15upx;
 		font-size:30upx;
 		padding: 10upx;
-		/* border-radius: 50%; */
+		height: 50upx;
+		width: 50upx;
+		// border-radius: 25upx;
 	}
+	.header-front {
+		// position: absolute;
+		// right: 250upx;
+		// font-size:30upx;
+		// padding: 10upx;
+		// width: 150upx;
+		// height: 10upx;
+		// display: flex;
+		width: 80%; margin: auto; margin-bottom: 20px; display: flex; flex-direction: row; justify-content: center;
+	}
+	
 	.classification {
 		display: flex;
 		align-items: stretch;
@@ -204,6 +188,15 @@
 		align-content: stretch;
 		justify-content: space-around;
 		flex-wrap: wrap;
+	}
+	.input {
+		width: 75%;
+		margin: auto;
+		height: 40px;
+		border-width:1px;
+		border-style:solid;
+		border-color:#000000;
+		border-radius: 5px;
 	}
 	.tag {
 		display: flex;
