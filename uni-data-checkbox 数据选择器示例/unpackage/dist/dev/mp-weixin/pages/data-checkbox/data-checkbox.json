@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-group": "/uni_modules/uni-group/components/uni-group/uni-group",
-    "uni-data-checkbox": "/uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox"
-  }
-}
