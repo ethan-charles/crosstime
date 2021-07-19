@@ -269,6 +269,60 @@ var _xflSelect = _interopRequireDefault(__webpack_require__(/*! ../../components
     } }, _defineProperty(_methods, "change", function change(_ref)
   {var newVal = _ref.newVal,oldVal = _ref.oldVal,index = _ref.index,orignItem = _ref.orignItem;
     console.log(newVal, oldVal, index, orignItem);
+  }), _defineProperty(_methods, "getUserCode", function getUserCode()
+  {var _this = this;
+    wx.login({
+      provider: 'weixin',
+      success: function success(res) {
+        _this.code = res.code;
+        console.log(_this.code);
+      } });
+
+  }), _defineProperty(_methods, "getUserProfile", function getUserProfile(
+  e) {
+    var that = this;
+    wx.getUserProfile({
+      desc: '用于完善资料',
+      success: function success(res) {
+        that.userInfo = res.userInfo;
+        that.iv = res.iv;
+        that.encryptedData = res.encryptedData;
+        that.hasUserInfo = true;
+        that.getconnect();
+      } });
+
+  }), _defineProperty(_methods, "getconnect", function getconnect(
+  e) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/springboot/user/login',
+      method: 'POST',
+      header: { 'content-type': 'application/x-www-form-urlencoded' },
+      data: {
+        'user_name': that.userInfo.nickName,
+        'user_encryptedData': that.encryptedData,
+        'user_IV': that.iv,
+        'user_avatar': that.userInfo.avatarUrl,
+        'user_gender': that.userInfo.gender },
+
+      success: function success(res) {
+        var resdata = res.data;
+        if (resdata == true) {
+          uni.showToast({
+            title: '登录成功',
+            icon: 'success'
+            // duration: 2000,
+          });
+          that.gopage();
+        } else {
+          uni.showToast({
+            title: '登录失败',
+            icon: 'error'
+            // duration: 2000,
+          });
+        }
+      } });
+
   }), _defineProperty(_methods, "gopage", function gopage()
   {
     uni.navigateTo({

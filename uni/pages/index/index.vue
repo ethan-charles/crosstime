@@ -12,7 +12,7 @@
 		</uni-swiper-dot></view>
 		
 		<view class="container" style="z-index: 2; position: absolute; top: 1100rpx;right: 0;">
-				<view  @click="gopage">
+				<view open-type="getUserProfile" @click="getUserProfile">
 					<image style="width: 220rpx; height: 100rpx;" src="../../static/start.png" open-type="getUserProfile"></image>
 				</view>
 		</view>
@@ -106,6 +106,60 @@
 			},
 			change({newVal, oldVal, index, orignItem}){ 
 				console.log(newVal, oldVal, index, orignItem);
+			},
+			getUserCode(){
+				wx.login({
+				  provider: 'weixin',
+				  success: res => {
+						this.code = res.code;
+						console.log(this.code);
+				        }
+				});
+			},
+			getUserProfile(e) {
+				var that = this;
+			    wx.getUserProfile({
+					desc: '用于完善资料',
+					success: res => {
+						that.userInfo = res.userInfo;
+						that.iv = res.iv;
+						that.encryptedData = res.encryptedData;
+						that.hasUserInfo = true;
+						that.getconnect();
+					}
+			    })
+			},
+			getconnect(e) {
+				var that = this;
+				wx.request({
+					url: 'http://localhost:8080/springboot/user/login',
+					method: 'POST',
+					header: { 'content-type': 'application/x-www-form-urlencoded' },
+					data: {
+						'user_name': that.userInfo.nickName,
+						'user_encryptedData': that.encryptedData,
+						'user_IV': that.iv,
+						'user_avatar': that.userInfo.avatarUrl,
+						'user_gender': that.userInfo.gender,
+					},
+					success:function(res){
+						var resdata = res.data;
+						if (resdata == true){
+							uni.showToast({
+								title: '登录成功',
+								icon: 'success',
+								// duration: 2000,
+							})
+							that.gopage();
+						}else{
+							uni.showToast({
+								title: '登录失败',
+								icon: 'error',
+								// duration: 2000,
+							})
+						}
+					}
+				})
 			},
 			gopage(){
 				uni.navigateTo({
