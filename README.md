@@ -1,27 +1,30 @@
 # crosstime
 
-constributor:魏宇弘，陆羿辰
+constributor:Wei Yuhong, Lu Yichen
 
-最终功能：实现小程序内实时电话沟通，
+Final Function:Realize real-time phone communication within a small program.
 
-**7.19编辑（陆羿辰）：**
+**7.19 Edit (Lu Yichen):**
 
-现阶段：前端完成基础框架搭建，未完成声网agora插件部署、图片替换（保存于static/exchangeimage）、res内用户数据传递
+At this stage: the front-end to complete the basic framework construction, not completed the sound network agora plug-in deployment, image replacement (saved in static/exchangeimage), res within the user data transfer
 
-后端完成用户登录注册功能，未完成部署、返回前端用户数据功能
+The back-end to complete the user login and registration function, not complete the deployment, return to the front-end user data functions
 
-数据库存在table：user
+Database exists table: user
 
-项目概述：
+Project Overview:
 
-技术栈：uni-app, springboot, mybatis
+Technology stack: uni-app, springboot, mybatis
 
-部署步骤：
+Deployment Steps:
 
-后端使用MySQLworkbench打开springboot项目中resource下的mwb文件，生成script在local instance mysql中运行
+Backend use MySQLworkbench to open the mwb file under resource in the springboot project and generate script to run in local instance mysql.
 
-根据自身情况修改application.yml文件中DataSource下的url，username，password
+Modify the url, username and password of the DataSource in the application.yml file according to your situation.
 
-运行crosstimemain.java文件
+Run the crosstimemain.java file.
 
-前端使用hbuilderX打开‘uni’项目文件夹， 打开pages文件夹下vue文件，预览
+Open the 'uni' project folder using hbuilderX, open the vue file in the pages folder and preview it.
+
+
+Translated with www.DeepL.com/Translator (free version)
