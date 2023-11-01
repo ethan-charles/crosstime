@@ -25,6 +25,3 @@ Modify the url, username and password of the DataSource in the application.yml f
 Run the crosstimemain.java file.
 
 Open the 'uni' project folder using hbuilderX, open the vue file in the pages folder and preview it.
-
-
-Translated with www.DeepL.com/Translator (free version)
